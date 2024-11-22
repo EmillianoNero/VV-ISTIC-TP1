@@ -27,12 +27,14 @@ Avec un plan de test, avec une durée un peu plus élargit, le probème aurait �
 Ce bug était précisément une erreur d'arrondit sur le 24e Bit d'une séquence, de ce fait le bug est local et a pû être rapidement corriger.
 
 
-Sources :  
-    https://fr.wikipedia.org/wiki/Guerre_du_Golfe,   
-    https://horustest.io/blog/les-10-bugs-informatiques-les-plus-couteux-de-l-histoire/,  
-    https://math.univ-lyon1.fr/irem/Formation_ISN/formation_representation_information/nombre/codage_numeriques_des_nombres.html
+  Sources :  
+    - https://fr.wikipedia.org/wiki/Guerre_du_Golfe,   
+    - https://horustest.io/blog/les-10-bugs-informatiques-les-plus-couteux-de-l-histoire/,  
+    - https://math.univ-lyon1.fr/irem/Formation_ISN/formation_representation_information/nombre/codage_numeriques_des_nombres.html
 
-2. 
+2. Le bug du ticket 813 est local car il ne dépends que d'une erreur dans une méthode d'un composant. Il s'agit d'une différence entre la documentation et le comportement de la méthode. En effet celle-ci est sensée retourner une exception particulière si un des paramètres est null. Ceci peut entraîner d'autres bugs si la méthode est utilisée par une autre personne qui ne connait pas l'implémentation. La solution adoptée est l'ajout d'une vérification des paramètre en entrée avec ```Objects.requireNonNull``` qui retourne une exception si un des paramètres est null. La personne qui a corrigé ce bug à bien rajouté des tests à la suite de sa correction pour prévenir d'un futur bug.
+    - [Le commit](https://github.com/apache/commons-collections/commit/7eb78290c8d7d1fa379536700de0bd4a81320bb0#diff-27c19e081e1e90e79b36daef451dcb7b44c295b56d0575e4f63648d7f3d158dc)
+    - [Le ticket](https://issues.apache.org/jira/projects/COLLECTIONS/issues/COLLECTIONS-813?filter=doneissues)
 
 3. Netflix utilise une méthode de stimulation de panne pour tester l'ensemble de son système pour cela, ils utilisent la méthode de "Chaos Engineering".
 
@@ -47,6 +49,15 @@ La première variable étudier pour chaque test est de vérifier si le système 
 
 - Netflix est-elle la seule entreprise à effectuer ces expériences ?
 Non, les entreprises comme Amazon, Google, Microsoft et Facebook utilisent se procéder pour tester leurs applications.
+
+4. Les avantages d'une spécification formelle pour web assembly sont : 
+- L'universalité et interopérabilité du language 
+- Une meilleure vérification de la fiabilité et de la sécurité du language
+- Faciliter les autres futures preuves formelles
+- Une base pour l'optimisation
+- Une meilleure évolution du language. En possèdant une spécification formelle du language, celui-ci en évoluant ne pourra pas dévier de son objectif principal tout en conservant ses bases formelles.
+
+    Selon nous tester le language même si il possède une spécification formelle prouvée reste nécessaire car même si la specification à été prouvée formellement, l'implémentation ne l'ai pas forcement. Il est aussi parfois plus complexe de prouver formellement l'implémentation, on prouve généralement seulement un sous-ensemble de propriétés.
 
 5. 
 - Quels sont les principaux avantages de la spécification mécanisée ?  
@@ -63,3 +74,4 @@ Les autres artefacts dérivés de cette spécification sont un vérificateur de 
 
 - Cette nouvelle spécification supprime-t-elle la nécessité de procéder à des tests ? 
 Malgré le fait que cette spécification fait en sorte de réaliser une vérification rigoureuse, elle ne confirme pas le conformité du système comme pourrait le faire les tests.
+
