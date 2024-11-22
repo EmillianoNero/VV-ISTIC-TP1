@@ -11,3 +11,30 @@
 5.  Shortly after the appearance of WebAssembly another paper proposed a mechanized specification of the language using Isabelle. The paper can be consulted here: https://www.cl.cam.ac.uk/~caw77/papers/mechanising-and-verifying-the-webassembly-specification.pdf. This mechanized specification complements the first formalization attempt from the paper. According to the author of this second paper, what are the main advantages of the mechanized specification? Did it help improving the original formal specification of the language? What other artifacts were derived from this mechanized specification? How did the author verify the specification? Does this new specification removes the need for testing?
 
 ## Answers
+
+1. 25 février 1991, Dharan, Arabie Saoudite, 28 morts, 100 blessés causés par un missile iraquien sur une base américaine dans la triste et célèbre guerre du golf. 
+
+- Mais que s'est-il passé ?   
+Alors que la guerre bat sont plein depuis plus de 7 mois, un scud iraquien frappe la caserne de Dahran le 14e détachement de quartier-maître de l’armée américaine. Cependant, l'attaque aurait dû être déjouée par le système de radar Patriot, mais un bug logiciel au niveau de la gestion des horodatages a décalé la partie du ciel scruté par le radar. 
+
+- Mais pourquoi était-il décalé ?  
+Le problème vient de la batterie du radar, qui était en fonction depuis plus de 100 heures, et qui à cause d'une erreur d'accumulation d'arrondi sur le calcul du temps, a créé un retard de 0.3 secondes sur le temps réellement écoulé. Cette erreur a causé un décalage de 500 mètres sur la prédiction du missile irakien.
+
+- Est ce que l'erreur aurait-il pû être trouvée ?  
+Avec un plan de test, avec une durée un peu plus élargit, le probème aurait été découvert mais en temps de guerre les délais de fabrication était surement restraint par l'armée Américaine.
+
+- Est que l'on qualifie ce bug de local ou global ?  
+Ce bug était précisément une erreur d'arrondit sur le 24e Bit d'une séquence, de ce fait le bug est local et a pû être rapidement corriger.
+
+
+Sources :  
+    https://fr.wikipedia.org/wiki/Guerre_du_Golfe,   
+    https://horustest.io/blog/les-10-bugs-informatiques-les-plus-couteux-de-l-histoire/,  
+    https://math.univ-lyon1.fr/irem/Formation_ISN/formation_representation_information/nombre/codage_numeriques_des_nombres.html
+
+2. 
+
+3. Netflix utilise une méthode de stimulation de panne pour tester l'ensemble de son système pour cela ils utilisent la méthode de "Chaos Engineering".
+
+- Quelles sont les expériences qu'ils effectuent ?
+Les expériences effectués sont de tester l'application sous certaine condition comme en enlevant un groupe de serveur, 
