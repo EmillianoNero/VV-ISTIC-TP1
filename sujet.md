@@ -48,5 +48,18 @@ La première variable étudier pour chaque test est de vérifier si le système 
 - Netflix est-elle la seule entreprise à effectuer ces expériences ?
 Non, les entreprises comme Amazon, Google, Microsoft et Facebook utilisent se procéder pour tester leurs applications.
 
+5. 
+- Quels sont les principaux avantages de la spécification mécanisée ?  
+Les principaux avantages sont tout d'abord, une rigueur formelle et des outils permettant de les prouver, une détection des erreurs dans la spécification, une preuve formelle des propriétés critiques, des propriétés extensibles et modifiable, et pour finir une base solide pour l'implémentation.
 
-5.
+- Cela a-t-il contribué à améliorer la spécification formelle originale du langage ?  
+Oui, car comme le montre le papier sur certains exemples, la spécification peut être reformuler et simplifier afin d'être plus claire et optimisée. 
+
+Exemple d'optimisation :
+![Exemple d'optimisation](img/img.png)
+
+- Quels autres artefacts ont été dérivés de cette spécification mécanisée ?  
+Les autres artefacts dérivés de cette spécification sont un vérificateur de types créé en Isabelle, la vérification des implémentations avec des tests fuzzing différentiels.
+
+- Cette nouvelle spécification supprime-t-elle la nécessité de procéder à des tests ? 
+Malgré le fait que cette spécification fait en sorte de réaliser une vérification rigoureuse, elle ne confirme pas le conformité du système comme pourrait le faire les tests.
