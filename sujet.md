@@ -34,7 +34,19 @@ Sources :
 
 2. 
 
-3. Netflix utilise une méthode de stimulation de panne pour tester l'ensemble de son système pour cela ils utilisent la méthode de "Chaos Engineering".
+3. Netflix utilise une méthode de stimulation de panne pour tester l'ensemble de son système pour cela, ils utilisent la méthode de "Chaos Engineering".
 
-- Quelles sont les expériences qu'ils effectuent ?
-Les expériences effectués sont de tester l'application sous certaine condition comme en enlevant un groupe de serveur, 
+- Quelles sont les expériences qu'ils effectuent ?  
+Les expériences effectuées sont de tester l'application sous certaines conditions comme en enlevant un groupe de serveur, en simulant une panne de réseau, en déconnectant des disques durs ou encore en créant de la latence artificiel.
+
+- Quelles sont les exigences pour ces expériences ?  
+Les exigences pour ces expériences sont tout d'abord de créer une hypothèse sur le dérouler du test, ensuite d'utiliser des outils comme Chaos Monkey afin d'automatiser les perturbations et enfin d'observer le temps de réponse et le taux d'erreur.
+
+- Quelles sont les variables qu'ils observent et quels sont les principaux résultats qu'ils ont obtenus ?  
+La première variable étudier pour chaque test est de vérifier si le système est toujours en fonctionnement malgré les erreurs. La deuxième est de regarder s'il y a une dégradation du temps de réponse, ensuite de voir le temps de réparation de la panne pour enfin finir sur la question de l'impact de l'erreur sur les utilisateurs.
+
+- Netflix est-elle la seule entreprise à effectuer ces expériences ?
+Non, les entreprises comme Amazon, Google, Microsoft et Facebook utilisent se procéder pour tester leurs applications.
+
+
+5.
