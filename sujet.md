@@ -72,6 +72,6 @@ Exemple d'optimisation :
 - Quels autres artefacts ont été dérivés de cette spécification mécanisée ?  
 Les autres artefacts dérivés de cette spécification sont un vérificateur de types créé en Isabelle, la vérification des implémentations avec des tests fuzzing différentiels.
 
-- Cette nouvelle spécification supprime-t-elle la nécessité de procéder à des tests ? 
+- Cette nouvelle spécification supprime-t-elle la nécessité de procéder à des tests ?   
 Malgré le fait que cette spécification fait en sorte de réaliser une vérification rigoureuse, elle ne confirme pas le conformité du système comme pourrait le faire les tests.
 
