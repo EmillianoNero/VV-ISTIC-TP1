@@ -66,7 +66,7 @@ Les principaux avantages sont tout d'abord, une rigueur formelle et des outils p
 - Cela a-t-il contribué à améliorer la spécification formelle originale du langage ?  
 Oui, car comme le montre le papier sur certains exemples, la spécification peut être reformuler et simplifier afin d'être plus claire et optimisée. 
 
-Exemple d'optimisation :
+Exemple d'optimisation :  
 ![Exemple d'optimisation](img/img.png)
 
 - Quels autres artefacts ont été dérivés de cette spécification mécanisée ?  
